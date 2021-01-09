@@ -9,7 +9,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
 }
 
 ul {
@@ -20,9 +19,7 @@ ul {
 
 a {
     text-decoration: none;
-    &:visited {
-        color: black;
-    }
+    color: black;
 }
 
 .nav {
@@ -60,9 +57,17 @@ a {
     }
 
     &_item {
-        padding: 1rem;
         font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    &_link {
+        padding: 1rem 0;
+        cursor: pointer;
+        &:hover {
+            background-color: transparent;
+            opacity: 1;
+        }
     }
 }
 
@@ -70,11 +75,11 @@ a {
     position: relative;
 
     &_list {
+        display: none;
         width:10%;
         position: fixed;
         top: 4rem;
         background-color:white;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -90,5 +95,9 @@ a {
             cursor: pointer;
             background-color: burlywood;
         }
+    }
+
+    &:hover > &_list {
+        display: flex;
     }
 }
