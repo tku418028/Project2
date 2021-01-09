@@ -85,11 +85,6 @@ a {
   cursor: pointer;
 }
 
-.menu_link:hover {
-  background-color: transparent;
-  opacity: 1;
-}
-
 .dropdown {
   position: relative;
 }
